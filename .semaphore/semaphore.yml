@@ -25,6 +25,7 @@ blocks:
         - name: Compilation
           commands:
             - checkout
+            - node --version
             - npm install
             - ./node_modules/.bin/lerna bootstrap
             - npm run start
