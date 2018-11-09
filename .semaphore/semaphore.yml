@@ -21,6 +21,9 @@ blocks:
           - echo "done"
   - name: "Compile JavaScript"
     task:
+      prologue:
+        commands:
+          - sem-version node 10.13.0
       jobs:
         - name: Compilation
           commands:
