@@ -19,6 +19,14 @@ blocks:
           - echo $APP_ENV
           - echo "Docker build..."
           - echo "done"
+  - name: "Compile JavaScript"
+    task:
+      jobs:
+        - name: Compilation
+          commands:
+            - checkout
+            - npm install
+            - npm run start
 
   - name: "Smoke tests"
     task:
